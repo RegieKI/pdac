@@ -1,0 +1,9 @@
+[submodule "pdac-frontend"]
+	path = pdac-frontend
+	url = https://github.com/RegieKI/pdac-frontend
+[submodule "pdac-backend"]
+	path = pdac-backend
+	url = https://github.com/RegieKI/pdac-backend
+[submodule "app/wireless-tools"]
+	path = app/wireless-tools
+	url = https://github.com/autr/wireless-tools.git

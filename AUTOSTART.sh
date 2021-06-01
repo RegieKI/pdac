@@ -1,0 +1,26 @@
+pdacDir=/home/pi/pdac
+sysDir=$pdacDir/system
+
+echo Loading bashrc...
+. ~/.bashrc
+. ~/.profile
+echo Killing all processes...
+/bin/sh $sysDir/killNode.sh &
+/bin/sh $sysDir/killPython.sh &
+/bin/sh $sysDir/killBrowser.sh &
+sleep 1
+
+#TODO:clock sync breaks if using static ip (no timeout)...
+#echo Syncing clock...
+#sudo /bin/sh $sysDir/utilitySyncTime.sh
+
+echo Mounting USB stick...
+$sysDir/utilityMountUSB.sh
+echo Syncing hostnames...
+$sysDir/utilitySyncHostnames.sh &
+sleep 1
+echo Using IP address...
+$sysDir/utilityShowIP.sh &
+sleep 1
+echo Start production frontend with buttons listener...
+$sysDir/runFrontendProd.sh & python $sysDir/pythonButtonsLCD.py 2>&1 | tee -a /home/pi/autostart_log.txt
