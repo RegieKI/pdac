@@ -50,13 +50,6 @@ npm i --production
 !!!include(../pdac/SYS.md)!!!
 
 
-**Links**
-
-* [ezapi](https://github.com/autr/ezapi) - autoconfiguring API toolkit
-* [ezlib](https://github.com/autr/ezlib) - utility endpoints for *ezapi*
-* [piapi](https://github.com/autr/piapi) - Raspberry Pi remote user interface
-
-
 #### License
 
-[MIT](https://github.com/RegieKI/pdac/blob/main/LICENSE-MIT.md)
+[MIT](https://github.com/RegieKI/regieki-docs/blob/main/LICENSE-MIT.md)
